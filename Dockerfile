@@ -13,7 +13,8 @@ COPY . .
 # update each dependency in package.json to the latest version
 RUN npm install -g npm-check-updates \
     ncu -u \
-    npm install
+    npm install \
+    npm install dotenv
 
 COPY . /app
 EXPOSE 43812
